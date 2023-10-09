@@ -17,7 +17,7 @@ export default function LogInBox() {
     >
       <div className="logIn-box__header col-12 p-0 m-0 ">
         <div className="row w-100 d-flex flex-column align-items-center ">
-          <p className="text-center" style={{ fontSize: "42px" }}>
+          <p className="text-center text-white" style={{ fontSize: "42px" }}>
             LOGIN
           </p>
         </div>
@@ -51,12 +51,12 @@ export default function LogInBox() {
           <small className="text-danger">password is required</small>
         )}
       </div>
-      <div className="logIn-box__footer col-12 p-0 m-0 d-flex flex-column  align-items-center py-4">
-        <button className="btn-logIn py-3 col-5 " type="submit">
+      <div className="logIn-box__footer col-12 p-0 m-0 d-flex flex-column  align-items-center pb-4">
+        <button className="btn-logIn py-3 col-5 text-white " type="submit">
           get started
         </button>
-        <label className=" py-3" style={{ fontSize: "12px" }}>
-          <input type="checkbox" className="mx-2" />I agree to the terms and
+        <label className=" py-3 text-white" style={{ fontSize: "12px" }}>
+          <input type="checkbox" className="mx-2 " />I agree to the terms and
           conditions
         </label>
       </div>

@@ -7,7 +7,7 @@ export default function Header() {
   const location = useLocation();
   const { pathname } = location;
   return (
-    <header className="container ">
+    <header className={` ${pathname !== "/" && pathname !== "/login" ? "px-lg-5  darkHeader":"container whiteHeader "  } `}>
       <div className="row p-0 m-0 w-100 py-4">
         <div className="col-lg-4 p-0 m-0 ">
           <div className=" w-100 d-flex justify-content-">
@@ -24,7 +24,7 @@ export default function Header() {
               </span>
             </Link>
             <Link to={UsersPage} className=" link-style px-4">
-              <span className={pathname === "/users" ? `active` : ""}>
+              <span className={pathname === "/users" ? `` : ""}>
                 Users
               </span>
             </Link>

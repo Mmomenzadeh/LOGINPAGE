@@ -1,4 +1,21 @@
-footer{
-    position: fixed;
-    bottom: 70px;
+.darkFooter {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  background-color: #e8e8e8 !important  ;
+
+  div a {
+    color: #000;
+  }
+}
+
+.whiteFooter {
+  position: fixed;
+  bottom: 70px;
+
+  div a {
+    color: #fff;
+  }
 }

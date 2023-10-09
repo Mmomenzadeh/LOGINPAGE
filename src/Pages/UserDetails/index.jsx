@@ -18,7 +18,7 @@ export default function UserDetails() {
 
 
   return (
-    <div className="row p-0 m-0 w-100 d-felx justify-content-center h-100 align-items-center">
+    <div className="row  p-0 m-0 w-100    d-felx   justify-content-center pt-5">
       <UserCard {...singleUserData} />
     </div>
   );
