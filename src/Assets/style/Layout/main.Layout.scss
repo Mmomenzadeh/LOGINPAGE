@@ -1,11 +1,26 @@
 .main {
   &__title {
     font-size: 83px;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1800px) {
+      font-size: 70px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 425px) {
+      font-size: 30px;
+    }
+    @media only screen and (min-width: 425px) and (max-width: 768px) {
+      font-size: 50px;
+    }
   }
 
   &__desc {
     text-align: justify;
 
     font-size: 14px;
+
+    @media only screen and (min-width: 320px) and (max-width: 425px) {
+      font-size: 10px;
+      // text-align: center;
+    }
   }
 }

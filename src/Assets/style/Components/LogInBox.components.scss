@@ -21,7 +21,6 @@
       border-bottom: 1px solid #fff !important;
       color: #fff !important;
 
-
       &::placeholder {
         color: #fff !important;
         font-family: "Inter", sans-serif !important;
@@ -36,7 +35,7 @@
 }
 
 .btn-logIn {
-  background: #fc636b;
+  background: #19bfd3;
   border: none;
   padding: 11px 15px;
   text-transform: uppercase;
@@ -46,5 +45,9 @@
   margin-top: 10px;
   letter-spacing: 2px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 20px #2691df80;
+  }
 }

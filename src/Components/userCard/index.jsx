@@ -4,7 +4,7 @@ export default function UserCard({ avatar, last_name, first_name, email, id }) {
   return (
     <Link
       to={`/users/${id}`}
-      className="p-0 m-0 col-12 p-0 m-0  d-flex flex-column  align-items-center "
+      className="p-0 m-0 col-12 p-0 m-0  d-flex flex-column  align-items-center  "
     >
       <div className="py-3">
         <img

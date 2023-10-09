@@ -1,5 +1,9 @@
 import { useForm } from "react-hook-form";
 import "./../../Assets/style/Components/LogInBox.components.scss";
+import { AuthService } from "../../Api/Services/LogIn";
+import { toast } from "react-toastify";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export default function LogInBox() {
   const {
@@ -8,11 +12,27 @@ export default function LogInBox() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {};
+  const navigation = useNavigate();
+
+  const onSubmit = async (data) => {
+    AuthService(data)
+      .then((res) => {
+        // console.log(res);
+        if (res.data.token) {
+          toast.success("successfull");
+          Cookies.set("token", res.data.token);
+          navigation("/users");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.response.data.error);
+        navigation("/");
+      });
+  };
 
   return (
     <form
-      className="logIn-box col-3 p-0 m-0 py-5"
+      className="logIn-box col-12 col-sm-11 col-md-8 col-lg-5  col-xl-3 p-0 m-0 py-5"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="logIn-box__header col-12 p-0 m-0 ">
@@ -34,8 +54,8 @@ export default function LogInBox() {
               /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
           })}
         />
-        {errors.username && (
-          <small className="text-danger">user name is required</small>
+        {errors.email && (
+          <small style={{fontSize:"12px"}} className="text-muted">user name is required</small>
         )}
         <input
           type="password"
@@ -44,11 +64,11 @@ export default function LogInBox() {
           {...register("password", {
             required: true,
             minLength: 8,
-            pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
+            // pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
           })}
         />
         {errors.password && (
-          <small className="text-danger">password is required</small>
+          <small style={{fontSize:"12px"}} className="text-muted">password is required</small>
         )}
       </div>
       <div className="logIn-box__footer col-12 p-0 m-0 d-flex flex-column  align-items-center pb-4">

@@ -1,3 +1,3 @@
-import { HttpService } from "../../../Service/HttpService";
+import { HttpService } from "../../Constants";
 
-export const AuthService = async (data) => HttpService.post("/api/login", data);
+export const AuthService = async (data) => await HttpService.post("/login", data);
