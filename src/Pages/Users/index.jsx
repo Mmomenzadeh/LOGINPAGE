@@ -10,7 +10,7 @@ export default function Users() {
     dispatch(fetchUsersList());
   }, [dispatch]);
 
-  console.log(userList.users.usersData);
+  // console.log(userList.users.usersData);
   return (
     <>
       {userList.users.status === "pending" ? (

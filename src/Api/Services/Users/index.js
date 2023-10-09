@@ -1,3 +1,3 @@
 import { HttpService } from "../../Constants";
 
-export const fetchUsersService = async () => await HttpService.get("/users")
+export const fetchUsersService = async () => await HttpService.get(`/users`);

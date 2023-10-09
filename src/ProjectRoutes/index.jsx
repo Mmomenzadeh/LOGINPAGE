@@ -10,6 +10,7 @@ import { HomePage, LogInPage, UsersPage } from "../Config/RouteConstant";
 import Home from "../Pages/Home";
 import Main from "../Layouts/Mian";
 import Users from "../Pages/Users";
+import UserDetails from "../Pages/UserDetails";
 
 export default function ProjectRouts() {
   return (
@@ -18,6 +19,7 @@ export default function ProjectRouts() {
         <Route index element={<Main/>}/>
         <Route path={LogInPage} element={<LogIn />} />
         <Route path={UsersPage} element={<Users />} />
+        <Route path="/users/:id" element={<UserDetails/>}/>
       </Route>
     </Routes>
   );
