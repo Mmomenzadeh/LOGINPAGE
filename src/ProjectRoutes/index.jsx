@@ -6,13 +6,15 @@ import {
   // useNavigate,
 } from "react-router-dom";
 import LogIn from "../Pages/LogIn";
-import { Home } from "../Config";
+import { HomePage, LogInPage } from "../Config/RouteConstant";
+import Home from "../Pages/Home";
 
 export default function ProjectRouts() {
 
   return (
     <Routes>
-      <Route path={Home} element={<LogIn />} />
+      <Route path={HomePage} element={<Home/>} />
+      <Route path={LogInPage} element={<LogIn/>}/>
     </Routes>
   );
 }

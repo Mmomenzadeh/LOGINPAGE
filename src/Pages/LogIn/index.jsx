@@ -1,5 +1,5 @@
 import LogInBox from "../../Components/LogInBox";
-import "./../../Assets/style/Pages/LogIn/index.scss";
+import "./../../Assets/style/Pages/index.scss";
 
 export default function LogIn() {
   return (
