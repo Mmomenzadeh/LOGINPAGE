@@ -12,14 +12,15 @@
 *,
 p,
 a,
-span {
+span,
+button , label{
   font-family: "Inter", sans-serif;
   color: #fff !important;
 }
 
 body {
   position: relative !important;
-//   overflow: hidden   ;
+  //   overflow: hidden   ;
 }
 
 a {
