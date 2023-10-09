@@ -6,9 +6,10 @@ import {
   // useNavigate,
 } from "react-router-dom";
 import LogIn from "../Pages/LogIn";
-import { HomePage, LogInPage } from "../Config/RouteConstant";
+import { HomePage, LogInPage, UsersPage } from "../Config/RouteConstant";
 import Home from "../Pages/Home";
 import Main from "../Layouts/Mian";
+import Users from "../Pages/Users";
 
 export default function ProjectRouts() {
   return (
@@ -16,6 +17,7 @@ export default function ProjectRouts() {
       <Route path={HomePage} element={<Home />}>
         <Route index element={<Main/>}/>
         <Route path={LogInPage} element={<LogIn />} />
+        <Route path={UsersPage} element={<Users />} />
       </Route>
     </Routes>
   );

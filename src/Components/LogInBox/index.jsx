@@ -27,14 +27,16 @@ export default function LogInBox() {
           type="text"
           placeholder="UserName"
           className="my-3 py-2"
-          {...register("username", {
+          {...register("email", {
             required: true,
             minLength: 4,
             pattern:
               /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
           })}
         />
-        {errors.username && <small className="text-danger">user name is required</small>}
+        {errors.username && (
+          <small className="text-danger">user name is required</small>
+        )}
         <input
           type="password"
           placeholder="Password"
@@ -45,10 +47,14 @@ export default function LogInBox() {
             pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
           })}
         />
-        {errors.password && <small className="text-danger">password is required</small>}
+        {errors.password && (
+          <small className="text-danger">password is required</small>
+        )}
       </div>
       <div className="logIn-box__footer col-12 p-0 m-0 d-flex flex-column  align-items-center py-4">
-        <button className="btn-logIn py-3 col-5 " type="submit">get started</button>
+        <button className="btn-logIn py-3 col-5 " type="submit">
+          get started
+        </button>
         <label className=" py-3" style={{ fontSize: "12px" }}>
           <input type="checkbox" className="mx-2" />I agree to the terms and
           conditions

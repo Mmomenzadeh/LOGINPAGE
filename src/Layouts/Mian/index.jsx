@@ -3,7 +3,7 @@ import React from "react";
 import "./../../Assets/style/Layout/index.scss";
 export default function Main() {
   return (
-    <main className="row w-100 p-0 m-0 justify-content-center h-50 align-items-center">
+    <main className="row w-100 p-0 m-0 justify-content-center h-50 align-items-center ">
       <div className=" main col-8 p-0 m-0 ">
         <p className=" main__title text-center ">Welcome to Royal Social Club</p>
         <div className="row p-0 m-0 w-100 d-flex justify-content-center py-4 ">

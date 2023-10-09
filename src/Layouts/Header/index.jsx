@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 import "./../../Assets/style/Layout/index.scss";
-import { HomePage, LogInPage } from "../../Config/RouteConstant";
+import { HomePage, LogInPage, UsersPage } from "../../Config/RouteConstant";
 
 export default function Header() {
   const location = useLocation();
@@ -12,7 +12,7 @@ export default function Header() {
         <div className="col-lg-4 p-0 m-0 ">
           <div className=" w-100 d-flex justify-content-">
             <Link to={HomePage} className="logo-style">
-              royal social club
+              royal social App
             </Link>
           </div>
         </div>
@@ -23,9 +23,9 @@ export default function Header() {
                 Login
               </span>
             </Link>
-            <Link to={"/aboutus"} className=" link-style px-4">
-              <span className={pathname === "/aboutus" ? `` : ""}>
-                About Us
+            <Link to={UsersPage} className=" link-style px-4">
+              <span className={pathname === "/users" ? `active` : ""}>
+                Users
               </span>
             </Link>
             <Link to={"/register"} className=" link-style px-4">

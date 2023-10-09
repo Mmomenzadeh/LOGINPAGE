@@ -2,12 +2,12 @@ import Header from "../../Layouts/Header";
 import Footer from "../../Layouts/Footer";
 
 import "./../../Assets/style/Pages/index.scss";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function Home() {
-  // console.log("home");
+  const location = useLocation()
   return (
-    <div className="Home ">
+    <div className={ location.pathname === "/" || location.pathname ===  "/login" ? `Home` : ""}>
       <Header />
       <Outlet />
       <Footer />
